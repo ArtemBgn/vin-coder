@@ -46,7 +46,7 @@ const footerStyle = {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/vin-coder">
       {/* Семантична шапка сайту */}
       <header style={headerStyle}>
         <nav style={navContainerStyle} aria-label="Головна навігація">
