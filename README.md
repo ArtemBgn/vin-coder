@@ -1,22 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-## +++++++++++++++++++++++++++++++++
-
 # 🚗 VIN Decoder App
 
 Вебзастосунок (SPA) для миттєвої розшифровки автомобільних VIN-кодів (Vehicle Identification Number) та перегляду технічних специфікацій бази даних NHTSA.
@@ -25,8 +6,8 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## 🔗 Демонстрація та Посилання
 
-- **Живий застосунок (Live Demo):** [Посилання на твій деплой (наприклад, Vercel/Netlify)](https://your-app-link.vercel.app)
-- **Репозиторій на GitHub:** [https://github.com/your-username/vin-decoder](https://github.com/your-username/vin-decoder)
+- **Живий застосунок (Live Demo):** https://artembgn.github.io/vin-coder/
+- **Репозиторій на GitHub:** https://github.com/ArtemBgn/vin-coder
 
 ---
 
@@ -79,7 +60,7 @@ If you are developing a production application, we recommend using TypeScript wi
 1. **Клонуйте репозиторій:**
 
    ```bash
-   git clone [https://github.com/your-username/vin-decoder.git](https://github.com/your-username/vin-decoder.git)
+   git clone https://github.com/ArtemBgn/vin-coder.git
    ```
 
 2. **Перейдіть у папку проєкту:**
@@ -103,10 +84,10 @@ If you are developing a production application, we recommend using TypeScript wi
 5. **Відкрийте застосунок у браузері:**
 
    ```bash
-   Перейдіть за адресою, яку вкаже термінал (зазвичай це http://localhost:5173)
+   http://localhost:5173
    ```
 
-6. **📦 Складання для продакшену:**
+6. **📦 Збірка для продакшену:**
    ```bash
    npm run build
    ```
