@@ -35,6 +35,26 @@ export const useVinStore = create(
 
           const data = await response.json();
 
+          const errorItem = (data.Results || []).find(
+            (item) =>
+              item.Variable === "Error Text" &&
+              item.Value &&
+              item.Value.trim() !== "0",
+          );
+
+          if (
+            errorItem &&
+            !errorItem.Value.startsWith("0") &&
+            !errorItem.Value.toLowerCase().includes("no error")
+          ) {
+            set({
+              error: errorItem.Value,
+              decodeResults: [],
+              isLoading: false,
+            });
+            return;
+          }
+
           if (data.Message) {
             set({ apiMessage: data.Message });
           }
