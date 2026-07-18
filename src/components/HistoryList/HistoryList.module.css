@@ -1,0 +1,54 @@
+.history-container {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє кнопкам гарно переноситись на маленьких екранах */
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin: 0;
+}
+
+.button {
+  padding: 8px 12px;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #f0f4f8;
+  border: 1px solid #d3e2f2;
+  border-radius: 20px;
+  color: #0066cc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: #e1ecf7;
+  border-color: #b8d2ed;
+}
+
+.button-active {
+  background-color: #0066cc;
+  color: #ffffff;
+  border-color: #0066cc;
+}
+
+.button-active:hover {
+  background-color: #0052a3;
+  border-color: #0052a3;
+}
