@@ -45,7 +45,10 @@
   color: #d32f2f;
   font-size: 13px;
   margin-top: 4px;
-  min-height: 18px; /* Запобігає "стрибанню" контенту при появі помилки */
+  min-height: 18px;
+}
+
+.api-ststus {
 }
 
 .button {

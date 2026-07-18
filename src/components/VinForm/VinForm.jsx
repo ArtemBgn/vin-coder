@@ -10,6 +10,7 @@ export default function VinForm() {
   const decodeVin = useVinStore((state) => state.decodeVin);
   const isLoading = useVinStore((state) => state.isLoading);
   const globalError = useVinStore((state) => state.error);
+  // const apiMessage = useVinStore((state) => state.apiMessage);
 
   // Робимо валідацію VIN
   const validateVin = (vin) => {
@@ -59,8 +60,7 @@ export default function VinForm() {
     await decodeVin(inputValue);
   };
 
-  const activeError =
-    localError || (globalError ? `Результат запиту: ${globalError}` : "");
+  const activeError = globalError || localError;
 
   return (
     <div className={css["form-container"]}>
@@ -84,6 +84,11 @@ export default function VinForm() {
           <div className={css["error-message"]}>
             {activeError && <span>{activeError}</span>}
           </div>
+          {/*apiMessage && (
+            <div className={css["api-status"]}>
+              Результат запиту: <span>{apiMessage}</span>
+            </div>
+          )*/}
         </div>
 
         <button type="submit" className={css.button} disabled={isLoading}>

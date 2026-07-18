@@ -11,12 +11,18 @@ export const useVinStore = create(
       isLoading: false,
       isLoadingVariables: false,
       error: null,
+      apiMessage: "",
 
       decodeVin: async (vin) => {
         const cleanVin = vin.trim().toUpperCase();
         if (!cleanVin) return;
 
-        set({ isLoading: true, error: null, currentVin: cleanVin });
+        set({
+          isLoading: true,
+          error: null,
+          apiMessage: "",
+          currentVin: cleanVin,
+        });
 
         try {
           const response = await fetch(
@@ -30,8 +36,12 @@ export const useVinStore = create(
           const data = await response.json();
 
           if (data.Message) {
-            set({ error: data.Message });
+            set({ apiMessage: data.Message });
           }
+
+          // if (data.Message) {
+          //   set({ error: data.Message });
+          // }
 
           const filteredResults = (data.Results || []).filter(
             (item) =>
@@ -40,7 +50,7 @@ export const useVinStore = create(
               item.Value.toString().trim() !== "",
           );
 
-          set({ decodeResults: filteredResults });
+          set({ decodeResults: filteredResults, error: null });
           get().addToHistory(cleanVin);
         } catch (err) {
           set({
