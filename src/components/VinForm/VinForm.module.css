@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: 12px;
   width: 100%;
-  max-width: 500px; /* Обмежуємо ширину для десктопів */
+  max-width: 500px;
 }
 
 .input-group {
@@ -24,11 +24,11 @@
 
 .input {
   padding: 10px 14px;
-  font-size: 16px; /* 16px запобігає авто-зуму на iOS при фокусі */
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-family: monospace; /* Моноширинний шрифт ідеально для кодів */
-  text-transform: uppercase; /* Візуально робимо літери великими */
+  font-family: monospace;
+  text-transform: uppercase;
   outline: none;
   transition: border-color 0.2s;
 }
